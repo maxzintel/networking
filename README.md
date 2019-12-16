@@ -44,3 +44,16 @@ Will fill in the gaps ASAP.
     1. `node decode-post.js` - Starts the server, listening on 5000.
     2. In another tab, `nc localhost 5000 < post.txt`
     * The output accurately states we get a POST request to /form, contains the request header object, and the body object.
+
+#### CURL
+* An alternative to the netcat stuff from above. More concise for HTTP requests.
+  * ex: `curl -s http://substack.net` => `-s` is for removing progress output.
+  * Issues a GET request to substack and prints the body to stdout by default.
+  * To see headers, add the option `-I`. Useful for debugging and http server.
+* Issue a POST with curl:
+  * Use `-X` to set the http verb to POST and `-d` to set form parameters.
+`$ curl -X POST http://localhost:5000 -d title=whatever \`
+`-d date=142104443 -d body='beep boop!'`
+
+
+
