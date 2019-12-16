@@ -40,3 +40,7 @@ Will fill in the gaps ASAP.
   `Content-Type: application/x-www-form-urlencoded`
 
   `title=whatever&date=142104443&body=beeo%20boop%21`
+  * Using the sample server in `~/Networking/decode-post.js`, we can test the post by running...
+    1. `node decode-post.js` - Starts the server, listening on 5000.
+    2. In another tab, `nc localhost 5000 < post.txt`
+    * The output accurately states we get a POST request to /form, contains the request header object, and the body object.
