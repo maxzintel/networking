@@ -1,0 +1,5 @@
+#!/bin/bash
+
+nc google.com 80
+GET / HTTP/1.0
+Host: google.com

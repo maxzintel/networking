@@ -28,7 +28,15 @@ Will fill in the gaps ASAP.
   4. PUT - upload a file
 * HEADERS
   * `key: value`, example below.
+  * GET request:
   `$ nc google.com 80`
   `GET / HTTP/1.0`
   `Host: google.com` => This is the actual header.
   * Enter the above into your terminal, and you should get a bunch of information back from google.
+  * POST request:
+  `$ POST /form HTTP/1.1`
+  `Host: localhost`
+  `Content-Length: 51`
+  `Content-Type: application/x-www-form-urlencoded`
+
+  `title=whatever&date=142104443&body=beeo%20boop%21`
