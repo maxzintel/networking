@@ -8,8 +8,24 @@
 * Stream Modules
 * Remote Procedure Call and Multiplex
 
-Lost a commit somewhere on my local machine...
-Will fill in the gaps ASAP.
+### 1. Networking
+* Any networked computer can be a server or client.
+* TCP - reliable transport.
+  * if a packet is not acknowledged (ACK) on the other end, it gets resent.
+  * Useful for audio, video, and most everything else.
+* UDP - unreliable.
+  * packets sent without confirmation of reception on the other end.
+  * generally used for games.
+* Protocols: Languages that computers speak to eachother.
+  * Network protocols:
+    * HTTP (80) - browse web pages
+    * HTTPS (443) - browse web pages with encryption
+    * IRC (6667) - chat
+    * FTP (21) - file transfer, fun fact: works similarly to how satellites communicate with earth.
+    * SSL - low level secure data transfer
+    * SMTP - send and receive emails
+    * IMAP/POP3 - load emails from an inbox
+    * SSH - remote shell over encrypted connection
 
 #### Netcat Server and Client
 * Try out netcat!
