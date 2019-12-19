@@ -1,1 +1,1 @@
-curl -X POST http://localhost:5000 -d title=whatever -d date=142104443 -d body='beep boop!
+curl -s http://substack.net
