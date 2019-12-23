@@ -92,7 +92,35 @@
   * `join #cyberwizard`
   * `privmsg #cyberwizard :hack the planet!`
 
+* Benefits of text protocol (http, smtp, irc) implementation:
+  * Data is easily inspected over the wire (wifi, ethernet).
+  * Commands/request sent via keyboard.
 
+#### Binary Protocols and Inspecting Protocols
+* With binary protocols you cant just type messages with the keyboard like we've been doing. You have to write programs (decoders) that unpack the incoming bytes and pack outgoing bytes according to the specification.
+* **SSH**
+  * example:
+    * `nc substack.net 22`
+    * Here we are trying to connect via netcat over ssh.
+    * If we then try to type something, like 'hello', the return will say `Protocol Mismatch`.
+    * In other words, the Binary Protocols expect binary for requests, not text.
+    * Using the `ssh` command essentially just lines up your commands with the binary input that ssh protocol expects.
+* Inspecting Protocols:
+  * Capture everything coming out of and into your wireless or ethernet card using...
+    * wireshark for a graphical tool.
+    * tcpdump for a command-line tool.
+  * Above works for unencrypted traffic. Not encrypted stuff like ssh.
+* tcpdump examples:
+  * `sudo tcpdump -X` outputs all info over the wire in hexadecimal format.
+  * `sudo tcpdump 'tcp port 80' -X` filters the output so we only see what is coming over the wire via HTTP. Which is unencrypted.
+    * check this by then running a `curl` to some address on http.
+
+* FAQ's for above protocols:
+  * smtp - www.faqs.org/rfcs/rfc821.html
+  * irc - www.faqs.org/rfcs/rfc2812.html
+  * http - www.faqs.org/rfcs/rfc2616
+
+End of Part 1!
 
 
 
