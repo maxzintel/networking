@@ -71,5 +71,28 @@
 `$ curl -X POST http://localhost:5000 -d title=whatever \`
 `-d date=142104443 -d body='beep boop!'`
 
+#### SMTP
+* Protocol used to deliver email messages.
+* We can send an email from whatever@whitehouse.gov to `somename@localhost`.
+* Lines that start with a number are messages from the server.
+* `nc localhost 25`
+* Lots in common with http. Text based protocol.
+* To send some example mail via smtp locally...
+  * mail from: whatever@whitehouse.gov
+  * rcpt to: somename@localhost
+  * Subject: Whatever.
+* Check the mail by running `mail`.
+
+#### IRC
+* Another text based protocol, particularly for chat. It is ancient, but still generally popular among programmers.
+* To mess with it, pick a `nick` (nickname) and hop on a open server, like `irc.freenode.net`.
+  * `nc irc.freenode.net 6667`
+  * `nick s1dequest`
+  * `user s1dequest s1dequest irc.freenode.net :s1dequest`
+  * `join #cyberwizard`
+  * `privmsg #cyberwizard :hack the planet!`
+
+
+
 
 
