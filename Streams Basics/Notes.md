@@ -17,4 +17,6 @@ Via a quote from 1964, think of it as connecting programs as you would lengthen 
 `<mobydick.txt.gz gunzip | sed -r '/s\s+/\n/g | grep -i whale | wc -l'`
   * (Counts the number of time the word `whale` is used in Moby Dick.
   * Another simple example is found in the file `ex1-greetzTest`.
+* Test the transformations easily by changing the `fs.createReadStream('greetz.txt')` line to `process.stdin`
 
+#### Using Node Core rather than through2:
