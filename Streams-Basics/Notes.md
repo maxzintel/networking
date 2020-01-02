@@ -90,3 +90,7 @@ Via a quote from 1964, think of it as connecting programs as you would lengthen 
 
 * Note: for creating a VPN, try libsodium implementation in node.
 * Other random note: install `readme` node package to read readme's of node packages offline.
+
+#### Object Streams
+* Normally you can only read and write buffers and strings with streams. However, if you init a stream in `objectMode` you can use any kind of object (except for `null`):
+* ex9 Shows this.
