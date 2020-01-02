@@ -19,4 +19,14 @@ Via a quote from 1964, think of it as connecting programs as you would lengthen 
   * Another simple example is found in the file `ex1-greetzTest`.
 * Test the transformations easily by changing the `fs.createReadStream('greetz.txt')` line to `process.stdin`
 
-#### Using Node Core rather than through2:
+#### through(write, end)
+* With through there are 2 params: `write`, and `end`. Both are optional.
+* `function write (buf, enc, next) {}`
+* `function end () {}`
+* Call `next()` when youre ready for the next chunk. If you don't your stream will hang.
+* Call `this.push(VALUE)` inside the callback to put VALUE into the stream's output.
+* Use a `VALUE` of `null` to end the stream.
+* If you don't give through any args, these are the default values for write and end:
+  * `function write (buf,enc,next) {this.push(buf); next()}`
+  * `function end () {this.push(null)}`
+  * This means that `through()` with no args will pass everything written as input directly through to its output.

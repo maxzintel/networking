@@ -8,5 +8,8 @@ fs.createReadStream('greetz.txt')
 var toUpper = new Transform({
   transform: function (buf, enc, next) {
     next(null, buf.toString().toUpperCase())
+    // NOTE: line 10 does the same thing as the following 2 lines...
+    // this.push(null, buf.toString().toUpperCase())
+    // next()
   }
 });
