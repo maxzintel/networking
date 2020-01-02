@@ -55,3 +55,11 @@ Via a quote from 1964, think of it as connecting programs as you would lengthen 
   * `.end(buf)`
   * `.on('finish', function () {})` emit finish event when complete.
   * `(...).pipe(stream)`
+
+#### Readable Stream Methods
+* `stream.pipe(...)`
+* `stream.once('end', () => {})`
+* In general, we won't need these (below) often:
+  * `stream.read()`
+  * `stream.on('readable', () => {})`
+  * Let a module or `.pipe()` take care of calling those.
