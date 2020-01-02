@@ -30,3 +30,9 @@ Via a quote from 1964, think of it as connecting programs as you would lengthen 
   * `function write (buf,enc,next) {this.push(buf); next()}`
   * `function end () {this.push(null)}`
   * This means that `through()` with no args will pass everything written as input directly through to its output.
+
+#### concat-stream
+* `npm install concat-stream`
+* concat-stream buffers up all the data in the stream. (ex4).
+* Can only write to a c-s, not read from one.
+* All data held in memory.
