@@ -33,6 +33,25 @@ Via a quote from 1964, think of it as connecting programs as you would lengthen 
 
 #### concat-stream
 * `npm install concat-stream`
-* concat-stream buffers up all the data in the stream. (ex4).
+* concat-stream buffers up all the data in the stream. (ex4 & ex5).
 * Can only write to a c-s, not read from one.
 * All data held in memory.
+
+### Stream Types:
+* We've seen two types already (transform = through2, writable = concat-stream), but there are more.
+  * readable - produces data: you can pipe FROM it.
+    * `readable.pipe(A)`
+  * writable - consumes data - you can pipe TO it.
+    * `A.pipe(writable)`
+  * transform - consumes data, producing transformed data.
+    * `A.pipe(transform).pipe(B)` Basically putting it between two streams.
+  * duplex - consumes data separately from producing it. Kind of like a telephone.
+    * `A.pipe(duplex).pipe(A)`
+
+#### Writable Stream Methods
+* Any stream you can write to (writable, transform, duplex) has these methods:
+  * `.write(buf)`
+  * `.end()`
+  * `.end(buf)`
+  * `.on('finish', function () {})` emit finish event when complete.
+  * `(...).pipe(stream)`
