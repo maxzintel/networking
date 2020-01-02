@@ -87,3 +87,6 @@ Via a quote from 1964, think of it as connecting programs as you would lengthen 
   * `duplex -> ouput`
   * All the readable AND writable methods are available.
   * `a.pipe(stream).pipe(a)`
+
+* Note: for creating a VPN, try libsodium implementation in node.
+* Other random note: install `readme` node package to read readme's of node packages offline.
