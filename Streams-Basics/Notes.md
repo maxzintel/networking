@@ -63,3 +63,27 @@ Via a quote from 1964, think of it as connecting programs as you would lengthen 
   * `stream.read()`
   * `stream.on('readable', () => {})`
   * Let a module or `.pipe()` take care of calling those.
+
+* Paused Mode:
+  * default behavior with automatic 'backpressure'
+  * Only producing data when you are consuming data.
+
+* Flowing Mode: Older than above.
+  * Data is consumed as soon as chunks are available.
+  * Good for non-production. Quick.
+  * Turn on flowing mode via...
+    * `stream.resume()`
+    * `stream.on('data', (buf) => {})`
+
+#### Transform Streams
+* Readable & Writable stream where...
+  * `input -> transform -> output`
+  * Methods of each of the two types listed above are available.
+
+#### Duplex Streams
+* Readable & Writable stream where...
+  * Input is decoupled from output, like a telephone.
+  * `input -> duplex`
+  * `duplex -> ouput`
+  * All the readable AND writable methods are available.
+  * `a.pipe(stream).pipe(a)`
