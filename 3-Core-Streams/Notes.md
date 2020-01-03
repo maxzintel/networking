@@ -36,3 +36,7 @@
 * `zlib.createInflate(opts)` - transform stream to uncompress with deflate
 * `zlib.createInflateRaw(opts)` - transform stream to uncompress with deflate raw
 * `zlib.createUnzip(opts)` - transform stream to uncompress gzip and deflate
+
+#### split2
+* split input on newlines.
+* This program (example 5) counts the number of lines of input, like `wc -l`.
