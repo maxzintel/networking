@@ -27,3 +27,12 @@
 * `crypto.createHMAC(algo, key)` - transform stream to output HMAC digest
 * `crypto.createSign(algo)` - writable stream to sign messages
 * `crypto.createVerify(algo)` - writable stream to verify signatures
+
+#### Zlib Core Streams
+* `zlib.createGzip(opts)` - transform stream to compress with gzip
+* `zlib.createGunzip(opts)` - transform stream to uncompress with gzip
+* `zlib.createDeflate(opts)` - transform stream to compress with deflate
+* `zlib.createDeflateRaw(opts)` - transform stream to compress with raw deflate
+* `zlib.createInflate(opts)` - transform stream to uncompress with deflate
+* `zlib.createInflateRaw(opts)` - transform stream to uncompress with deflate raw
+* `zlib.createUnzip(opts)` - transform stream to uncompress gzip and deflate
