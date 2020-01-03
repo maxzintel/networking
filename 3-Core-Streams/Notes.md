@@ -17,3 +17,13 @@
   * request = you are the client, and you are sending date (POST body, etc...)
   * response = response from the server (readable)
   * `const req = http.request(opts, (res) => {})`
+
+#### Crypto Core Streams
+* `crypto.createCipher(algo, password)` - transform stream to encrypt
+* `crypto.createDecipher(algo, password)` - transform stream to decrypt
+* `crypto.createCipheriv(algo, key, iv)` - transform stream to encrypt with iv
+* `crypto.createDecipheriv(algo, key, iv)` - transform stream to decrypt with iv
+* `crypto.createHash(algo)` - transform stream to output cryptographic hash
+* `crypto.createHMAC(algo, key)` - transform stream to output HMAC digest
+* `crypto.createSign(algo)` - writable stream to sign messages
+* `crypto.createVerify(algo)` - writable stream to verify signatures
