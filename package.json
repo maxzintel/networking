@@ -6,6 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "child_process": "^1.0.2",
+    "collect-stream": "^1.2.1",
     "concat-stream": "^2.0.0",
     "crypto": "^1.0.1",
     "ecstatic": "^4.1.2",
