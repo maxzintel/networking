@@ -11,5 +11,8 @@
   * for a writable stream with a write and flush function.
 
 #### duplexify
+* Lets you define a stream where you have to do some setup first before you can get a handle.
+  * Setup (make a dir) and then write to a file in that dir.
+* No need to expose an async interface.
 
 #### pump, pumpify, end-of-stream
