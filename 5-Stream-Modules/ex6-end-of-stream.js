@@ -6,7 +6,7 @@ var server = net.createServer((stream) => {
     stream.write(Date.now() + '\n');
   }, 1000)
   onend(stream, () => {
-    clearInterval(iv);
+    clearInterval(iv); // fnc to be called whenever the stream is 'done'. Errors out or closes cleanly, or whatever.
   });
 });
 server.listen(5000);
