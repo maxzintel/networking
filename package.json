@@ -10,10 +10,12 @@
     "concat-stream": "^2.0.0",
     "crypto": "^1.0.1",
     "ecstatic": "^4.1.2",
+    "from2": "^2.3.0",
     "fs": "0.0.1-security",
     "net": "^1.0.2",
     "split2": "^3.1.1",
     "through2": "^3.0.1",
+    "to2": "^1.0.0",
     "websocket-stream": "^5.5.0",
     "yo-yo": "^1.4.1",
     "zlib": "^1.0.5"

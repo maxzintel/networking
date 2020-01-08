@@ -1,5 +1,5 @@
 const split = require('split2');
-const through = require('through2');
+const through = require('to2');
 
 var count = 0;
 process.stdin
