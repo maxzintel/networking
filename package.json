@@ -10,7 +10,7 @@
     "concat-stream": "^2.0.0",
     "crypto": "^1.0.1",
     "duplexify": "^4.1.1",
-    "ecstatic": "^4.1.2",
+    "ecstatic": "^4.1.4",
     "end-of-stream": "^1.4.4",
     "from2": "^2.3.0",
     "fs": "0.0.1-security",
